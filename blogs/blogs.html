@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogs</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="keywords" content="keywords,here">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
+
+</head>
+
+<body class="bg-black font-sans leading-normal tracking-normal">
+    <!--Navbar starts-->
+
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-black">
+        <a class="text-3xl font-bold leading-none" href="#">
+            <img class="h-[70px]" src="/changedlogo.jpg" alt="" />
+        </a>
+        <div class="lg:hidden">
+            <button class="navbar-burger flex items-center text-blue-600 p-3">
+                <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div>
+        <ul
+            class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/index.html">Home</a>
+            </li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li><a class="text-sm text-gray-400" href="/events/events.html">Events</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/Team/core.html">Teams</a>
+            </li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/contact.html">Contact</a>
+            </li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/blogs/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-black border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                    <img class="h-[70px]" src="/changedlogo.jpg" alt="" />
+                </a>
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <ul>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/index.html">Home</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/events/events.html">Events</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/Team/core.html">Teams</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/contact.html">Contact</a>
+                    </li>
+
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/blogs/blogs.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span>Copyright © 2022</span>
+                </p>
+            </div>
+        </nav>
+    </div>
+    <script>
+        // Burger menus
+        document.addEventListener("DOMContentLoaded", function () {
+            // open
+            const burger = document.querySelectorAll(".navbar-burger");
+            const menu = document.querySelectorAll(".navbar-menu");
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener("click", function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle("hidden");
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll(".navbar-close");
+            const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener("click", function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle("hidden");
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener("click", function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle("hidden");
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+
+    <!--Navbar Ends-->
+
+
+    <!--Header-->
+    <div class="w-full m-0 p-0 bg-cover bg-bottom"
+        style="background-image:url('cover.jpg'); height: 60vh; max-height:460px;">
+        <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+            <!--Title-->
+            <p class="text-white font-extrabold text-3xl md:text-5xl">
+                Welcome to our blogs
+            </p>
+            <p class="text-xl md:text-2xl text-gray-500">We’ve got blogs to help you.</p>
+        </div>
+    </div>
+
+    <!--Container-->
+    <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+
+        <div class="mx-0 sm:mx-6">
+
+            <!--Nav-->
+            <!-- <nav class="mt-0 w-full">
+				<div class="container mx-auto flex items-center">
+
+					<div class="flex w-1/2 pl-4 text-sm">
+						<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+							<li class="mr-2">
+								<a class="inline-block py-2 px-2 text-white no-underline hover:underline"
+									href="post.html">POST</a>
+							</li>
+							<li class="mr-2">
+								<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
+									href="#">LINK</a>
+							</li>
+							<li class="mr-2">
+								<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
+									href="#">LINK</a>
+							</li>
+							<li class="mr-2">
+								<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2"
+									href="post_vue.html">POST_VUE</a>
+							</li>
+						</ul>
+					</div> -->
+
+
+            <!-- <div class="flex w-1/2 justify-end content-center">
+						<a class="inline-block text-gray-500 no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
+							data-tippy-content="@twitter_handle" href="https://twitter.com/intent/tweet?url=#">
+							<svg class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+								<path
+									d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z">
+								</path>
+							</svg>
+						</a>
+						<a class="inline-block text-gray-500 no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 avatar"
+							data-tippy-content="#facebook_id" href="https://www.facebook.com/sharer/sharer.php?u=#">
+							<svg class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+								<path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z">
+								</path>
+							</svg>
+						</a>
+					</div>
+
+				</div>
+			</nav> -->
+
+            <div class="bg-black w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+
+                <!--Lead Card-->
+                <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
+                    <a href="/blogs/blog1.html" class="flex flex-wrap no-underline hover:no-underline">
+                        <div class="w-full md:w-2/3 rounded-t">
+                            <img src="/gelleryimges/Email id.png" class="h-full w-full shadow">
+                        </div>
+
+                        <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
+                            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                                <p class="w-full text-gray-600 text-xs md:text-sm pt-6 px-6">GETTING STARTED</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6">We are looking for sponsors
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    This help as a sponsor will not only help us cost our events effectively but also
+                                    provide our sponsors with an energetic audience base of young college students of
+                                    Pune for better-targeted sales and marketing, and a better reach.
+                                </p>
+                            </div>
+
+                            <div
+                                class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                                <div class="flex items-center justify-between">
+                                    <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                        src="/spon-images/Akshat.png" alt="Avatar of Author">
+                                    <p class="text-gray-600 text-xs md:text-sm">5 MIN READ</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </a>
+                </div>
+                <!--/Lead Card-->
+
+
+                <!--Posts Container-->
+                <div class="flex flex-wrap justify-between pt-12 -mx-6">
+
+                    <!--1/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <a href="/blogs/blog2.html" class="flex flex-wrap no-underline hover:no-underline">
+                                <img src="/spon-images/privacy-policy.jpeg" class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6">Privacy policy & Social media
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    Social Media has drastically changed the way people interact with their friends,
+                                    associates, and family members.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                    src="/spon-images/Sharvin .png" alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">3 MIN READ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--1/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <a href="/blogs/blog3.html" class="flex flex-wrap no-underline hover:no-underline">
+                                <img src="/spon-images/online safetry.webp" class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6">The Complete Guide To Your
+                                    Online Safety!
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    We all like to roam around on the internet make new accounts, discover new
+                                    platforms, download new and exciting data/files, etc. but wait! Have we ever
+                                    wondered what happens to this data??
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                    src="/spon-images/Akshat.png" alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">3 MIN READ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--1/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <a href="/blogs/blog4.html" class="flex flex-wrap no-underline hover:no-underline">
+                                <img src="/spon-images/data theft.jpeg" class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                                <div class="w-full  font-bold text-xl text-gray-900 px-6">Data Theft- A New Generation
+                                    Leech
+
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    You all might be wondering what “Data Theft ” means.<br>
+                                    Today lets talk on this, what exactly the data theft or data stealing is.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                    src="/spon-images/Sharvin .png" alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">3 MIN READ</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--1/2 col -->
+                    <!-- <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <a href="/blogs/blog5.html" class="flex flex-wrap no-underline hover:no-underline">
+                                <img src="https://source.unsplash.com/collection/3657445/800x600"
+                                    class="h-full w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                    src="http://i.pravatar.cc/300" alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!--1/2 col -->
+                    <!-- <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 flex-row bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <a href="/blogs/blog6.html" class="flex flex-wrap no-underline hover:no-underline">
+                                <img src="https://source.unsplash.com/collection/764827/800x600"
+                                    class="h-full w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                    src="http://i.pravatar.cc/300" alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+
+                    <!--2/3 col -->
+                    <!-- <div class="w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <a href="/blogs/blog7.html" class="flex flex-wrap no-underline hover:no-underline">
+                                <img src="https://source.unsplash.com/collection/325867/800x600"
+                                    class="h-full w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                    src="http://i.pravatar.cc/300" alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!--1/3 col -->
+                    <!-- <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <a href="/blogs/blog8.html" class="flex flex-wrap no-underline hover:no-underline">
+                                <img src="https://source.unsplash.com/collection/1118905/800x600"
+                                    class="h-full w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
+                                </p>
+                            </a>
+                        </div>
+                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
+                                    src="http://i.pravatar.cc/300" alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+                <!--/ Post Content-->
+
+            </div>
+
+
+            <!--Subscribe-
+			<div class="container font-sans bg-green-100 rounded mt-8 p-4 md:p-24 text-center">
+				<h2 class="font-bold break-normal text-2xl md:text-4xl">Subscribe to Ghostwind CSS</h2>
+				<h3 class="font-bold break-normal font-normal text-gray-600 text-base md:text-xl">Get the latest posts
+					delivered right to your inbox</h3>
+				<div class="w-full text-center pt-4">
+					<form action="#">
+						<div class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center">
+							<input type="email" placeholder="youremail@example.com"
+								class="flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none">
+							<button type="submit"
+								class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400">Subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>-->
+
+
+
+            <!--Author--
+			<div class="flex w-full items-center font-sans p-8 md:p-24">
+				<img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+				<div class="flex-1">
+					<p class="text-base font-bold text-base md:text-xl leading-none">Ghostwind CSS</p>
+					<p class="text-gray-600 text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <a
+							class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500"
+							href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+				</div>
+				<div class="justify-end">
+					<button
+						class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read
+						More</button>
+				</div>
+			</div>-->
+
+
+        </div>
+
+
+    </div>
+
+
+    <footer class="text-gray-400 bg-black body-font">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                    <img class="h-[70px]" src="/changedlogo.jpg" alt="">
+                    <p></p>
+                </a>
+            </div>
+
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">E Cell</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/events/events.html">Events</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/Team/core.html">Teams</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/contact.html">Contact</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Social</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.instagram.com/edc_pvg/">Instagram</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.facebook.com/edcpvgcoet">Facebook</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="https://twitter.com/e_coet">Twitter</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.linkedin.com/company/pvgedc/mycompany/">Linkdin</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Help Center</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.pvgcoet.ac.in/pvgs-entrepreneurship-development-cell/">PVG’s College
+                                of Engineering
+                                and Technology & G. K. Pate (Wani)
+                                Institute of Management</a>
+                        </li>
+
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <!-- <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Address</h2>
+			  <nav class="list-none mb-10">
+				<li>
+				  <a class="text-gray-400 hover:text-white">First Link</a>
+				</li>
+				<li>
+				  <a class="text-gray-400 hover:text-white">Second Link</a>
+				</li>
+				<li>
+				  <a class="text-gray-400 hover:text-white">Third Link</a>
+				</li>
+				<li>
+				  <a class="text-gray-400 hover:text-white">Fourth Link</a>
+				</li>
+			  </nav>-->
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 bg-opacity-75">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-400 text-sm text-center sm:text-left">© 2022 EDCPVGCOET —
+                    <a href="#" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@edcpvgcoet</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-400" href="https://www.facebook.com/edcpvgcoet">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-400" href="https://twitter.com/e_coet">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-400" href="https://www.instagram.com/edc_pvg/">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-400" href="https://www.linkedin.com/company/pvgedc/mycompany/">
+
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script>
+        //Init tooltips
+        tippy('.avatar')
+    </script>
+</body>
+
+</html>

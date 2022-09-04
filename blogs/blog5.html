@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>title</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <style>
+        .smooth {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        ::selection {
+            background-color: aliceblue
+        }
+    </style>
+</head>
+
+<body class="bg-black font-sans leading-normal tracking-normal">
+    <!--Navbar starts-->
+
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-black">
+        <a class="text-3xl font-bold leading-none" href="#">
+            <img class="h-[70px]" src="/changedlogo.jpg" alt="" />
+        </a>
+        <div class="lg:hidden">
+            <button class="navbar-burger flex items-center text-blue-600 p-3">
+                <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div>
+        <ul
+            class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/index.html">Home</a>
+            </li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li><a class="text-sm text-gray-400" href="/events/events.html">Events</a></li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/Team/core.html">Teams</a>
+            </li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/contact.html">Contact</a>
+            </li>
+            <li class="text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            </li>
+            <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/blogs/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+            class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-black border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                    <img class="h-[70px]" src="/changedlogo.jpg" alt="" />
+                </a>
+                <button class="navbar-close">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <ul>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/index.html">Home</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/events/events.html">Events</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="Team/core.html">Teams</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/contact.html">Contact</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                            href="/blogs/blogs.html">Blogs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <p class="my-4 text-xs text-center text-gray-400">
+                    <span>Copyright © 2022</span>
+                </p>
+            </div>
+        </nav>
+    </div>
+    <script>
+        // Burger menus
+        document.addEventListener("DOMContentLoaded", function () {
+            // open
+            const burger = document.querySelectorAll(".navbar-burger");
+            const menu = document.querySelectorAll(".navbar-menu");
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener("click", function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle("hidden");
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll(".navbar-close");
+            const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener("click", function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle("hidden");
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener("click", function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle("hidden");
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+
+    <!--Navbar Ends-->
+
+
+
+    <!--Progress bar-->
+    <div id="progress" class="h-1 bg-white shadow"
+        style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+    </div>
+
+
+    <!--Title-->
+    <div class="text-center pt-16 md:pt-32">
+        <p class="text-sm md:text-base text-green-500 font-bold">hellos<span class="text-gray-900">/</span>
+            GETTING STARTED</p>
+        <h1 class="font-bold text-white break-normal text-3xl md:text-5xl">Welcome to blah blah</h1>
+    </div>
+
+    <!--image-->
+    <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
+        style="background-image:url('https://source.unsplash.com/collection/1118905/'); height: 75vh;"></div>
+
+    <!--Container-->
+    <div class="container max-w-5xl mx-auto -mt-32">
+
+        <div class="mx-0 sm:mx-6">
+
+            <div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"
+                style="font-family:Georgia,serif;">
+
+                <!--Post Content-->
+
+
+                <!--Lead Para-->
+                <p class="text-2xl md:text-3xl mb-5">
+                    This blog is written by our general secretery <a
+                        class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500"
+                        href="https://in.linkedin.com/in/sharvin-pharande-2397901a4">Sharvin Pharande<a
+                            class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500"
+                            href="https://www.ghost.org"></a> <a
+                            class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500"
+                            href="https://demo.ghost.io/welcome"></a>
+                </p>
+
+                <p class="py-6">
+                <h1 class="font-bold ">Privacy Policy & Social Media :</h1><br>
+                Social Media has drastically changed the way people interact with their friends, associates, and
+                family members. Although social networks like Twitter, Facebook, Instagram, Snapchat, and LinkedIn,
+                play a major role in our day to day lives, I have also come to discover that they could also pose
+                serious privacy risks. When using these social media sites, it’s quite important to know and
+                understand the privacy risks involved.</p>
+
+                <p class="py-6">
+                <h1 class="font-bold">Privacy Risks on Social Media</h1><br>
+                Nowadays, hackers prowl social media looking for victims. They tend to use the shortened URLs like
+                those which are created with bit.ly or cutt.ly. They use these shortened URLs to trick their victims
+                into visiting harmful sites or install viruses/spyware into their computers or mobile phones.
+                Hackers also use spyware which they can easily install on your mobile phone, laptop, etc remotely
+                via downloads, emails, shortened URLs, or instant messages. The spyware gives the hacker information
+                about the passwords you use on your social media networks and other accounts that you access online.<br>
+                The simplest way to avoid being a victim is to never click on links unless you’re sure of the actual
+                source.<br>
+                Sharing personal information on popular social networking sites such as Facebook, Instagram, Twitter
+                has become a social trend user’s feel comfortable about sharing their private life online but the
+                issues of privacy online remains. A case study revealed that users of social networking sites have
+                now become more open and share personal information online with many people.
+
+
+
+
+                </p>
+
+                <ol>
+                    <li class="py-3">This may have become a social trend in modern times but users should keep in mind
+                        that information can be kept between online disclosures of personal information and privacy</li>
+                    <li class="py-3">Social media sites utilize mobile apps and location-based services to allow users
+                        to check-in at their current locations. This normally reveals the user’s current location to the
+                        people they are connected with within their social media network. The information posted can be
+                        easily used by malicious people to track your whereabouts.</li>
+                    <li class="py-3">Moreover, telling the online community where you are, or where you are going to,
+                        can end up inviting burglars and thieves to your home or business. For instance, by posting your
+                        current location and saying that you are on a long vacation in Australia, you will be letting
+                        the potential burglars or/and thieves know exactly where you are, and how long you will be gone.
+                        To mitigate such risks, you should avoid posting your travel plans, and using location-based
+                        services.
+                    </li>
+                </ol>
+
+                <blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">“We’re training and
+                    conditioning a whole new generation of people that when we are uncomfortable or lonely or uncertain
+                    or afraid we have a digital pacifier for ourselves that is kind of atrophying our own ability to
+                    deal with that.” — Tristan Harris, former design ethicist at Google and co-founder of Centre for
+                    Humane Technologies</blockquote>
+
+                <!-- <p class="py-6">Example code block:</p>
+                <pre class="bg-gray-900 rounded text-white font-mono text-base p-4">
+					<code class="break-words whitespace-pre-wrap">
+&lt;header class="site-header outer"&gt;
+  &lt;div class="inner"&gt;
+    {{&gt; "site-nav"}}
+  &lt;/div&gt;
+&lt;/header&gt;
+					</code>
+				</pre> -->
+
+
+                <!--/ Post Content-->
+
+            </div>
+
+
+            <!--Subscribe-->
+            <div class="container font-sans bg-green-100 rounded mt-8 p-4 md:p-24 text-center mb-3">
+                <h2 class="font-bold break-normal text-2xl md:text-4xl">Get in touch</h2>
+                <h3 class="font-bold break-normal font-normal text-gray-600 text-base md:text-xl"> Maecenas vel sapien
+                    suscipit, elementum odio et, consequat tellus.</h3>
+                <div class="w-full text-center pt-4">
+                    <form action="#">
+                        <div class="max-w-sm mx-auto p-1 pr-0 flex flex-wrap items-center">
+                            <input type="email" placeholder="youremail@example.com"
+                                class="flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none">
+                            <button type="submit"
+                                class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none bg-green-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-green-400">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /Subscribe-->
+
+
+            <!--Author-->
+            <!-- <div class="flex w-full items-center font-sans p-8 md:p-24">
+                <img class="w-10 h-10 rounded-full mr-4" src="http://i.pravatar.cc/300" alt="Avatar of Author">
+                <div class="flex-1">
+                    <p class="text-base font-bold text-base md:text-xl leading-none">Ghostwind CSS</p>
+                    <p class="text-gray-600 text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <a
+                            class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500"
+                            href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
+                </div>
+                <div class="justify-end">
+                    <button
+                        class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read
+                        More</button>
+                </div>
+            </div> -->
+            <!--/Author-->
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- 
+    <div class="bg-gray-200">
+
+        <div class="container w-full max-w-6xl mx-auto px-2 py-8">
+            <div class="flex flex-wrap -mx-2">
+                <div class="w-full md:w-1/3 px-2 pb-12">
+                    <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
+                        <a href="#" class="no-underline hover:no-underline">
+                            <img src="https://source.unsplash.com/_AjqGGafofE/400x200"
+                                class="h-48 w-full rounded-t shadow-lg">
+                            <div class="p-6 h-auto md:h-48">
+                                <p class="text-gray-600 text-xs md:text-sm">GETTING STARTED</p>
+                                <div class="font-bold text-xl text-gray-900">Lorem ipsum dolor sit amet.</div>
+                                <p class="text-gray-800 font-serif text-base mb-5">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
+                                    commodo posuere et sit amet ligula.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
+                                <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300"
+                                    alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">2 MIN READ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-2 pb-12">
+                    <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
+                        <a href="#" class="no-underline hover:no-underline">
+                            <img src="https://source.unsplash.com/_AjqGGafofE/400x200"
+                                class="h-48 w-full rounded-t shadow">
+                            <div class="p-6 h-auto md:h-48">
+                                <p class="text-gray-600 text-xs md:text-sm">UNDERWATER</p>
+                                <div class="font-bold text-xl text-gray-900">Biolumini algae diatomeae ecology.</div>
+                                <p class="text-gray-800 font-serif text-base mb-5">
+                                    Lorem ipsum dolor sit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
+                                <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300"
+                                    alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">4 MIN READ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-2 pb-12">
+                    <div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
+                        <a href="#" class="no-underline hover:no-underline">
+                            <img src="https://source.unsplash.com/DEa8_vxKlEo/400x200"
+                                class="h-48 w-full rounded-t shadow">
+                            <div class="p-6 h-auto md:h-48">
+                                <p class="text-gray-600 text-xs md:text-sm">FOREST</p>
+                                <div class="font-bold text-xl text-gray-900">What is life but a teardrop in the eye of
+                                    infinity?</div>
+                                <p class="text-gray-800 font-serif text-base mb-5">
+                                    Mollis pretium integer eros et dui orci, lectus nec elit sagittis neque. Dignissim
+                                    ac nullam semper aliquet volutpat, ut scelerisque.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
+                                <img class="w-8 h-8 rounded-full mr-4" src="http://i.pravatar.cc/300"
+                                    alt="Avatar of Author">
+                                <p class="text-gray-600 text-xs md:text-sm">7 MIN READ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div> -->
+    <div class="p-6 sm:p-12 dark:bg-gray-900 dark:text-gray-100">
+        <div class="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
+            <img src="https://source.unsplash.com/75x75/?portrait" alt=""
+                class="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700">
+            <div class="flex flex-col">
+                <h4 class="text-lg font-semibold text-center md:text-left">Leroy Jenkins</h4>
+                <p class="dark:text-gray-400">Sed non nibh iaculis, posuere diam vitae, consectetur neque. Integer velit
+                    ligula, semper sed nisl in, cursus commodo elit. Pellentesque sit amet mi luctus ligula euismod
+                    lobortis ultricies et nibh.</p>
+            </div>
+        </div>
+        <div class="flex justify-center pt-4 space-x-4 align-center">
+            <a rel="noopener noreferrer" href="#" aria-label="GitHub"
+                class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current">
+                    <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                    </path>
+                </svg>
+            </a>
+            <a rel="noopener noreferrer" href="#" aria-label="Dribble"
+                class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current">
+                    <path
+                        d="M256 8C119.252 8 8 119.252 8 256s111.252 248 248 248 248-111.252 248-248S392.748 8 256 8zm163.97 114.366c29.503 36.046 47.369 81.957 47.835 131.955-6.984-1.477-77.018-15.682-147.502-6.818-5.752-14.041-11.181-26.393-18.617-41.614 78.321-31.977 113.818-77.482 118.284-83.523zM396.421 97.87c-3.81 5.427-35.697 48.286-111.021 76.519-34.712-63.776-73.185-116.168-79.04-124.008 67.176-16.193 137.966 1.27 190.061 47.489zm-230.48-33.25c5.585 7.659 43.438 60.116 78.537 122.509-99.087 26.313-186.36 25.934-195.834 25.809C62.38 147.205 106.678 92.573 165.941 64.62zM44.17 256.323c0-2.166.043-4.322.108-6.473 9.268.19 111.92 1.513 217.706-30.146 6.064 11.868 11.857 23.915 17.174 35.949-76.599 21.575-146.194 83.527-180.531 142.306C64.794 360.405 44.17 310.73 44.17 256.323zm81.807 167.113c22.127-45.233 82.178-103.622 167.579-132.756 29.74 77.283 42.039 142.053 45.189 160.638-68.112 29.013-150.015 21.053-212.768-27.882zm248.38 8.489c-2.171-12.886-13.446-74.897-41.152-151.033 66.38-10.626 124.7 6.768 131.947 9.055-9.442 58.941-43.273 109.844-90.795 141.978z">
+                    </path>
+                </svg>
+            </a>
+            <a rel="noopener noreferrer" href="#" aria-label="Twitter"
+                class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current">
+                    <path
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                    </path>
+                </svg>
+            </a>
+            <a rel="noopener noreferrer" href="#" aria-label="Email"
+                class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current">
+                    <path
+                        d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <footer class="text-gray-400 bg-black body-font">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+                    <img class="h-[70px]" src="/changedlogo.jpg" alt="">
+                    <p></p>
+                </a>
+            </div>
+
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">E Cell</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/events/events.html">Events</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/Team/core.html">Teams</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="/contact.html">Contact</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Social</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.instagram.com/edc_pvg/">Instagram</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.facebook.com/edcpvgcoet">Facebook</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white" href="https://twitter.com/e_coet">Twitter</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.linkedin.com/company/pvgedc/mycompany/">Linkdin</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Help Center</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-400 hover:text-white"
+                                href="https://www.pvgcoet.ac.in/pvgs-entrepreneurship-development-cell/">PVG’s College
+                                of Engineering
+                                and Technology & G. K. Pate (Wani)
+                                Institute of Management</a>
+                        </li>
+
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <!-- <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Address</h2>
+			  <nav class="list-none mb-10">
+				<li>
+				  <a class="text-gray-400 hover:text-white">First Link</a>
+				</li>
+				<li>
+				  <a class="text-gray-400 hover:text-white">Second Link</a>
+				</li>
+				<li>
+				  <a class="text-gray-400 hover:text-white">Third Link</a>
+				</li>
+				<li>
+				  <a class="text-gray-400 hover:text-white">Fourth Link</a>
+				</li>
+			  </nav>-->
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 bg-opacity-75">
+            <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                <p class="text-gray-400 text-sm text-center sm:text-left">© 2022 EDCPVGCOET —
+                    <a href="#" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@edcpvgcoet</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                    <a class="text-gray-400" href="https://www.facebook.com/edcpvgcoet">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-400" href="https://twitter.com/e_coet">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-400" href="https://www.instagram.com/edc_pvg/">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-400" href="https://www.linkedin.com/company/pvgedc/mycompany/">
+
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        /* Progress bar */
+        //Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+        var h = document.documentElement,
+            b = document.body,
+            st = 'scrollTop',
+            sh = 'scrollHeight',
+            progress = document.querySelector('#progress'),
+            scroll;
+        var scrollpos = window.scrollY;
+        var header = document.getElementById("header");
+
+        document.addEventListener('scroll', function () {
+
+            /*Refresh scroll % width*/
+            scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+            progress.style.setProperty('--scroll', scroll + '%');
+
+            /*Apply classes for slide in bar*/
+            scrollpos = window.scrollY;
+
+            if (scrollpos > 100) {
+                header.classList.remove("hidden");
+                header.classList.remove("fadeOutUp");
+                header.classList.add("slideInDown");
+            }
+            else {
+                header.classList.remove("slideInDown");
+                header.classList.add("fadeOutUp");
+                header.classList.add("hidden");
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
