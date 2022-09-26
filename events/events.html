@@ -15,8 +15,134 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
 </head>
 
+
+
 <body class="bg-black">
     <!--Navbar starts-->
+    
+     <style>
+        html, body {
+    margin: 0px;
+    padding: 0px;
+    background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+}
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+    </style>
 
     <nav class="relative px-4 py-4 flex justify-between items-center bg-black">
         <a class="text-3xl font-bold leading-none" href="#">
@@ -71,7 +197,7 @@
                 </svg>
             </li>
             <li>
-                <a class="text-sm text-gray-400 hover:text-gray-500" href="/blogs/blogs.html">Blogs</a>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="../blogs/blogs.html">Blogs</a>
             </li>
         </ul>
     </nav>
@@ -81,7 +207,7 @@
             class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-black border-r overflow-y-auto">
             <div class="flex items-center mb-8">
                 <a class="mr-auto text-3xl font-bold leading-none" href="#">
-                    <img class="h-[70px]" src="../changedlogo.jpg" alt="" />
+                    <img class="h-[70px]" src="../Assets/imgs/changedlogo.jpg" alt="" />
                 </a>
                 <button class="navbar-close">
                     <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
@@ -111,7 +237,7 @@
                     </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                            href="/blogs/blogs.html">Blogs</a>
+                            href="../blogs/blogs.html">Blogs</a>
                     </li>
                 </ul>
             </div>
@@ -209,7 +335,7 @@
             <div
                 class=" max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4 h-[80%]">
                 <a href="#">
-                    <img class="rounded-t-lg w-full" src="/events/images/SPEAKER-SESSION.png" alt="">
+                    <img class="rounded-t-lg w-full" src="../events/images/SPEAKER-SESSION.png" alt="">
                 </a>
                 <div class="p-5">
                     <a href="#">
@@ -237,7 +363,7 @@
             <div
                 class="  h-[80%] max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
                 <a href="#">
-                    <img class="rounded-t-lg w-full h-[50%]" src="/events/images/NETWORK-SESSION.png"
+                    <img class="rounded-t-lg w-full h-[50%]" src="../events/images/NETWORK-SESSION.png"
                         alt="b plan image">
                 </a>
                 <div class="p-5">
