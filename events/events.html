@@ -11,142 +11,143 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/events/addedEvents/cara.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Assets/imgs/favicon-16x16.png">
 </head>
 
 
 
 <body class="bg-black">
     <!--Navbar starts-->
-    
-     <style>
-        html, body {
-    margin: 0px;
-    padding: 0px;
-    background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
-}
 
-.carousel {
-    position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
-}
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+        }
 
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
+        .carousel {
+            position: relative;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+            margin-top: 26px;
+        }
 
-.carousel-open:checked + .carousel-item {
-    position: static;
-    opacity: 100;
-}
+        .carousel-inner {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
 
-.carousel-item {
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-}
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
 
-.carousel-item img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
+        .carousel-item {
+            position: absolute;
+            opacity: 0;
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
 
-.carousel-control {
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
-    width: 40px;
-    z-index: 10;
-}
+        .carousel-item img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
 
-.carousel-control.prev {
-    left: 2%;
-}
+        .carousel-control {
+            background: rgba(0, 0, 0, 0.28);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 40px;
+            height: 40px;
+            line-height: 35px;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            cursor: pointer;
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            text-align: center;
+            width: 40px;
+            z-index: 10;
+        }
 
-.carousel-control.next {
-    right: 2%;
-}
+        .carousel-control.prev {
+            left: 2%;
+        }
 
-.carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
-}
+        .carousel-control.next {
+            right: 2%;
+        }
 
-#carousel-1:checked ~ .control-1,
-#carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
-    display: block;
-}
+        .carousel-control:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaaaaa;
+        }
 
-.carousel-indicators {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
+            display: block;
+        }
 
-.carousel-indicators li {
-    display: inline-block;
-    margin: 0 5px;
-}
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
 
-.carousel-bullet {
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 35px;
-}
+        .carousel-indicators li {
+            display: inline-block;
+            margin: 0 5px;
+        }
 
-.carousel-bullet:hover {
-    color: #aaaaaa;
-}
+        .carousel-bullet {
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-size: 35px;
+        }
 
-#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-    color: #428bca;
-}
+        .carousel-bullet:hover {
+            color: #aaaaaa;
+        }
 
-#title {
-    width: 100%;
-    position: absolute;
-    padding: 0px;
-    margin: 0px auto;
-    text-align: center;
-    font-size: 27px;
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 9999;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
-}
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #428bca;
+        }
+
+        #title {
+            width: 100%;
+            position: absolute;
+            padding: 0px;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 27px;
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Open Sans', sans-serif;
+            z-index: 9999;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+        }
     </style>
 
     <nav class="relative px-4 py-4 flex justify-between items-center bg-black">
-        <a class="text-3xl font-bold leading-none" href="#">
-            <img class="h-[70px]" src="../changedlogo.jpg" alt="" />
+        <a class="text-3xl font-bold leading-none" href="../index.html">
+            <img class="h-[70px]" src="../Assets/imgs/changedlogo.jpg" alt="" />
         </a>
         <div class="lg:hidden">
             <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -206,7 +207,7 @@
         <nav
             class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-black border-r overflow-y-auto">
             <div class="flex items-center mb-8">
-                <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                <a class="mr-auto text-3xl font-bold leading-none" href="../index.html">
                     <img class="h-[70px]" src="../Assets/imgs/changedlogo.jpg" alt="" />
                 </a>
                 <button class="navbar-close">
@@ -293,14 +294,17 @@
 
     <!--Navbar Ends-->
     <!-- img content-->
-    <div
-        class="relative bg-[url('../events/images/eventmainpage.jpg')] w-full h-[500px] bg-cover bg-no-repeat bg-center mb-10">
+    <div class="relative  w-full h-[500px] bg-cover bg-no-repeat bg-center mb-12">
         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black z-10">
-            <h1 class="animate-pulse  absolute bottom-[20%] left-7 text-white font-bold text-4xl tracking-wider">
-                <span class="text-blue-500">E</span>nterpreneurship <span class="text-yellow-500">D</span>evelopement
-                <span class="text-yellow-700">C</span>ell
+            <h1 class="animate-pulse  absolute bottom-[5%] left-7 text-white font-bold text-4xl tracking-wider">
+                <span class="text-blue-500"></span> <span class="text-yellow-500"></span>
+                <span class="text-yellow-700"></span>
             </h1>
         </div>
+        <video width="100%" class="absolute top-0 left-0 w-full h-full z-5 " src="../Assets/videos/events.mp4" autoplay
+            loop>
+
+        </video>
     </div>
     <!-- img content-->
     <div class="max-w-[1280px] mx-auto">
@@ -312,11 +316,11 @@
             <div class="container mx-auto flex px-3 py-12 items-center justify-center flex-col">
                 <div class="text-center lg:w-2/3 w-full">
 
-                    <p class="leading-relaxed mb-4">EDC PVGCOET is a six-year-old inter-departmental college club now,
+                    <p class="leading-relaxed mb-4">PVGCOET is a six-year-old inter-departmental college club now,
                         and with so many years that have gone past, we have learned to master the skill of event
                         management and helping people through their entrepreneurship journey. The E-Cell of our college
                         is ranked amongst the top E-Cells for the E-Summit held each year at IIT Bombay and has been
-                        striving to reach new levels as we grow older and more experienced each year. From the year
+                        striving to reach new levels as we grow older and more experienced each year.<br>From the year
                         2019, we commenced on the new journey of hosting our inter-college annual event called
                         'Venturers."</p>
                     </p>
@@ -334,7 +338,7 @@
 
             <div
                 class=" max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4 h-[80%]">
-                <a href="#">
+                <a href="./addedEvents/event1.html">
                     <img class="rounded-t-lg w-full" src="../events/images/SPEAKER-SESSION.png" alt="">
                 </a>
                 <div class="p-5">
@@ -343,8 +347,8 @@
                             SPEAKER SESSION
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">The event aims to enhance activity and
-                        provide training to students interested in entrepreneurial skills.
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Tab: This is a fair for wisdom and
+                        hustle, you are welcome for getting your minds blown.
 
                     </p>
                     <a href="../events/addedEvents/event1.html"
@@ -362,7 +366,7 @@
 
             <div
                 class="  h-[80%] max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
+                <a href="./addedEvents/event2.html">
                     <img class="rounded-t-lg w-full h-[50%]" src="../events/images/NETWORK-SESSION.png"
                         alt="b plan image">
                 </a>
@@ -371,9 +375,8 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">NETWORK SESSION
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Plan for what is difficult while it is
-                        easy ,do what is great while it is small.
-                        An event where one can present their master plans
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Tab: Join the team of entrepreneurs
+                        today with this session, all it takes is some clarity and vision.
 
                     </p>
                     <a href="../events/addedEvents/event2.html"
@@ -392,7 +395,7 @@
 
             <div
                 class="max-w-sm  h-[80%] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
+                <a href="./addedEvents/event3.html">
                     <img class="rounded-t-lg w-full " src="../events/images/standup.jpg" alt="">
                 </a>
                 <div class="p-5">
@@ -400,9 +403,9 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">STANDUP COMEDY
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> “A thrust towards success !<br>
-                        It is entrepreneur’s “reality show “<br>
-                        Learn from Expert's Experience
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Tab: let’s have a laugh together!
+                        ‘Engineer toh ban hi jayenge,
+                        Meanwhile, let’s have some fun.’
 
 
                     </p>
@@ -423,7 +426,7 @@
         <div class="flex flex-wrap justify-center align-center">
             <div
                 class="  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
+                <a href="./addedEvents/event4.html">
                     <img class="rounded-t-lg w-full" src="../events/images/interview-session.png" alt="">
                 </a>
                 <div class="p-5">
@@ -432,7 +435,8 @@
                             SESSION
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> “Be the King of Stocks !”<br>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Perceptions make all the difference!
+                        <br>
                         "An investment in knowledge pays the best interest."
 
 
@@ -452,7 +456,7 @@
 
             <div
                 class=" max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
+                <a href="./addedEvents/event5.html">
                     <img class="rounded-t-lg w-full" src="../events/images/board-meeting.png" alt="">
                 </a>
                 <div class="p-5">
@@ -460,9 +464,8 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">BOARD MEETING
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">“Get ready for real decoding of
-                        LOL…”<br>
-                        An event which was a plethora of laughter with none other than great comedian Mandar Bhide.
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> It's a scary world out there! That's
+                        what people say. <br>But mostly it's just FOU (Fear Of Unknown).
 
                     </p>
                     <a href="../events/addedEvents/event5.html"
@@ -481,17 +484,17 @@
 
             <div
                 class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
-                    <img class="rounded-t-lg w-full h-[50%] " src="../events/images/shark-tank.png" alt="">
+                <a href="./addedEvents/event6.html">
+                    <img class="rounded-t-lg w-full  " src="../events/images/shark-tank.png" alt="">
                 </a>
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">SHARK TANK
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> “Bid it to Win it !”<br>
-                        You need to manage your budget and you can strategize to make the best team competing against
-                        opponents.
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> They say opportunity will knock on
+                        your door, just listen. <br>But what if it doesn't?
+                        <br>Don't worry we got you a door.
 
                     </p>
                     <a href="../events/addedEvents/event6.html"
@@ -510,7 +513,7 @@
         <div class="flex flex-wrap justify-center align-center">
             <div
                 class="  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
+                <a href="./addedEvents/event7.html">
                     <img class="rounded-t-lg w-full" src="../events/images/TRESURE-HUNT.png" alt="">
                 </a>
                 <div class="p-5">
@@ -518,8 +521,10 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">TREASURE HUNT
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> “Be the King of Stocks !”<br>
-                        "An investment in knowledge pays the best interest."
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">To the adventure for finding the
+                        treasure of EDC.<br>
+                        Not all treasure is gold and silver, mate!
+                        <br>-Captain Jack Sparrow.
 
 
                     </p>
@@ -538,7 +543,7 @@
 
             <div
                 class=" max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
+                <a href="./addedEvents/event8.html">
                     <img class="rounded-t-lg w-full" src="../events/images/crick.jpg" alt="">
                 </a>
                 <div class="p-5">
@@ -546,9 +551,9 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">CRICK AUCTION
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">“Get ready for real decoding of
-                        LOL…”<br>
-                        An event which was a plethora of laughter with none other than great comedian Mandar Bhide.
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Ever wondered how it feels like to be
+                        the part of an auction ? Well
+                        here is your chance to experience it .
 
                     </p>
                     <a href="../events/addedEvents/event8.html"
@@ -567,17 +572,17 @@
 
             <div
                 class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-4">
-                <a href="#">
-                    <img class="rounded-t-lg w-full h-[50%] " src="../events/images/v-sharez.jpg" alt="">
+                <a href="./addedEvents/event9.html">
+                    <img class="rounded-t-lg w-full  " src="../events/images/v-sharez.jpg" alt="">
                 </a>
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">V-SHAREZ
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> “Bid it to Win it !”<br>
-                        You need to manage your budget and you can strategize to make the best team competing against
-                        opponents.
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> An investment in knowledge pays the
+                        best interest.
+                        Tab: Am sure you don’t want to miss the profit of learning and biding!!
 
                     </p>
                     <a href="../events/addedEvents/event9.html"
@@ -597,7 +602,7 @@
 
 
     <!--carasoul content -->
-    <div class="carousel">
+    <!-- <div class="carousel">
         <div class="carousel-inner">
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
                 checked="checked">
@@ -632,7 +637,7 @@
                 </li>
             </ol>
         </div>
-    </div>
+    </div> -->
 
     <!--footer-->
     <footer class="text-gray-400 bg-black body-font">
@@ -641,7 +646,7 @@
                 class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                 <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                     <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-                        <img src="../changedlogo.jpg" alt="">
+                        <img src="../Assets/imgs/changedlogo.jpg" alt="">
                         <p></p>
                     </a>
                 </div>
